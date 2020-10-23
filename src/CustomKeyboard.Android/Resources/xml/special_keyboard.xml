@@ -3,9 +3,9 @@
     android:keyWidth="8%p"
     android:keyHeight="50dp"
     android:horizontalGap="1%p"
-    android:verticalGap="1%p">
+    android:verticalGap="0.2%p">
     
-    <Row android:keyHeight="4dp" android:rowEdgeFlags="top" android:verticalGap="1%p">
+    <Row android:keyHeight="4dp" android:rowEdgeFlags="top" android:verticalGap="0.5%p">
         <Key android:codes="0" android:keyWidth="100%p" android:keyIcon="@drawable/kb_separator_line" />
     </Row>
   
@@ -38,7 +38,7 @@
         <Key android:codes="11" android:keyLabel="4" android:keyWidth="18%p" />
         <Key android:codes="12" android:keyLabel="5" android:keyWidth="18%p" />
         <Key android:codes="13" android:keyLabel="6" android:keyWidth="18%p" />
-         <Key android:codes="67" android:keyLabel="ABC" android:keyWidth="25%p" /> <!-- To Do -->
+         <Key android:codes="67" android:keyLabel="ABC" android:keyWidth="25%p" /> 
 
 
         <Key android:codes="0" android:keyWidth="0dp" android:horizontalGap="8%p" android:keyEdgeFlags="right"  />
@@ -50,14 +50,14 @@
         <Key android:codes="14" android:keyLabel="7" android:keyWidth="18%p" />
         <Key android:codes="15" android:keyLabel="8" android:keyWidth="18%p" />
         <Key android:codes="16" android:keyLabel="9" android:keyWidth="18%p" />
-        <Key android:codes="66" android:keyLabel="ENTER" android:keyWidth="25%p" android:keyHeight="18%p" />
+        <Key android:codes="66" android:keyLabel="ENTER" android:keyWidth="25%p" android:keyHeight="17%p" />
 
         <Key android:codes="0" android:keyWidth="0dp" android:horizontalGap="8%p" android:keyEdgeFlags="right"  />
     </Row>
     
     <Row>
         <Key android:codes="0" android:keyWidth="0dp" android:horizontalGap="8%p" android:keyEdgeFlags="left" />
-              <Key android:codes="56" android:keyLabel="." android:keyWidth="18%p" /><!-- To Do Verify if coma or dot-->
+        <Key android:codes="55" android:keyLabel="," android:keyWidth="18%p" />
 
         <Key android:codes="7" android:keyLabel="0" android:keyWidth="37%p" />
         <Key android:codes="0" android:keyWidth="0dp" android:horizontalGap="8%p" android:keyEdgeFlags="right"  />
