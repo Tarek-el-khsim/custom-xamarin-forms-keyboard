@@ -169,6 +169,7 @@ namespace CustomKeyboard.Droid.Renderers
         {
             this.mKeyboardView.Keyboard = this.mKeyboard;
         }
+                
 
         // Method to show our custom keyboard
         private void ShowKeyboardWithAnimation()
@@ -244,10 +245,10 @@ namespace CustomKeyboard.Droid.Renderers
                     // Sometimes EditText takes long to update the HasFocus status
                     //if (this.EditText.HasFocus)
                     //{
-                        // Close the keyboard, remove focus and launch command asociated action
-                        //this.HideKeyboardView();
+                    // Close the keyboard, remove focus and launch command asociated action
+                    //this.HideKeyboardView();
 
-                        //this.ClearFocus();
+                    //this.ClearFocus();
                     //this.EditText.ShowSoftInputOnFocus = true;
                     //imm.ShowSoftInput(this, ShowFlags.Implicit);// HideSoftInputFromWindow(this.EditText.WindowToken, HideSoftInputFlags.None);
 
@@ -255,6 +256,10 @@ namespace CustomKeyboard.Droid.Renderers
                     //this.mKeyboard = new Android.sof InputMethodServices.Keyboard(this.context, Resource.Xml.special_keyboard);
 
                     //this.SetCurrentKeyboard();
+
+                    this.HideKeyboardView();
+
+                    //this.ClearFocus();
 
                     InputMethodManager inputMethodManager = (InputMethodManager)this.context.GetSystemService(Context.InputMethodService) as InputMethodManager;
                     inputMethodManager.ShowSoftInput(this, ShowFlags.Forced);
@@ -271,7 +276,7 @@ namespace CustomKeyboard.Droid.Renderers
             // Set the cursor at the end of the text
             this.EditText.SetSelection(this.EditText.Text.Length);
 
-            if (this.EditText.HasFocus)
+            if (this.EditText.HasFocus && (ev.KeyCode != Keycode.Button16))
             {
                 this.DispatchKeyEvent(ev);
 
