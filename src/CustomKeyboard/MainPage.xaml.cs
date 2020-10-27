@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace CustomKeyboard
@@ -8,11 +9,15 @@ namespace CustomKeyboard
     {
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();       
 
             // Here we implement the action of the Enter button on our custom keyboard
             this.entry1.EnterCommand = new Command(() => this.entry2.Focus());
             this.entry2.EnterCommand = new Command(() => this.entry1.Focus());
-        }
+            this.entry2.AbcCommand = new Command(() => this.entry2.Focus()); 
+            
+        }      
+
+        
     }
 }

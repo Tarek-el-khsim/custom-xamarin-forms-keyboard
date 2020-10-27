@@ -30,13 +30,15 @@
                     Keyboard="Text"
                     TextColor="Black"
                     Placeholder="Custom Keyboard entry..." />
-                
+
                 <local:EntryWithCustomKeyboard
                     x:Name="entry2"
                     HorizontalOptions="FillAndExpand"
                     Keyboard="Text"
                     TextColor="Black"
-                    Placeholder="Custom Keyboard entry 2..." />
+                    Placeholder="Custom Keyboard entry 2...">                    
+                    </local:EntryWithCustomKeyboard>               
+                
             </StackLayout>
             
             <BoxView

@@ -18,5 +18,19 @@ namespace CustomKeyboard
             get => (ICommand)GetValue(EnterCommandProperty);
             set => SetValue(EnterCommandProperty, value);
         }
+
+        public static readonly BindableProperty AbcCommandProperty = BindableProperty.Create(
+           nameof(AbcCommand),
+           typeof(ICommand),
+           typeof(EntryWithCustomKeyboard),
+           default(ICommand),
+           BindingMode.TwoWay
+       );
+
+        public ICommand AbcCommand
+        {
+            get => (ICommand)GetValue(AbcCommandProperty);
+            set => SetValue(AbcCommandProperty, value);
+        }
     }
 }

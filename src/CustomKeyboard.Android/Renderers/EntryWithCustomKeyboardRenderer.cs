@@ -169,6 +169,7 @@ namespace CustomKeyboard.Droid.Renderers
         {
             this.mKeyboardView.Keyboard = this.mKeyboard;
         }
+                
 
         // Method to show our custom keyboard
         private void ShowKeyboardWithAnimation()
@@ -238,6 +239,17 @@ namespace CustomKeyboard.Droid.Renderers
 
                         this.entryWithCustomKeyboard.EnterCommand?.Execute(null);
                     }
+                    break;
+
+                case Keycode.Button16:
+                    
+                    this.HideKeyboardView();
+                    //Show native keyboard
+                    InputMethodManager inputMethodManager = (InputMethodManager)this.context.GetSystemService(Context.InputMethodService) as InputMethodManager;
+                    inputMethodManager.ShowSoftInput(this, ShowFlags.Forced);
+                    inputMethodManager.ToggleSoftInput(ShowFlags.Forced, HideSoftInputFlags.ImplicitOnly);
+                    
+                    this.entryWithCustomKeyboard.AbcCommand?.Execute(null);
 
                     break;
             }
@@ -245,7 +257,7 @@ namespace CustomKeyboard.Droid.Renderers
             // Set the cursor at the end of the text
             this.EditText.SetSelection(this.EditText.Text.Length);
 
-            if (this.EditText.HasFocus)
+            if (this.EditText.HasFocus && (ev.KeyCode != Keycode.Button16))
             {
                 this.DispatchKeyEvent(ev);
 
