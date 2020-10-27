@@ -50,7 +50,7 @@
         <Key android:codes="14" android:keyLabel="7" android:keyWidth="18%p" />
         <Key android:codes="15" android:keyLabel="8" android:keyWidth="18%p" />
         <Key android:codes="16" android:keyLabel="9" android:keyWidth="18%p" />
-        <Key android:codes="66" android:keyLabel="ENTER" android:keyWidth="25%p" android:keyHeight="17%p" />
+        <Key android:codes="66" android:keyIcon ="@drawable/enter" android:keyLabel="ENTER" android:keyWidth="25%p" android:keyHeight="17%p" />
 
         <Key android:codes="0" android:keyWidth="0dp" android:horizontalGap="8%p" android:keyEdgeFlags="right"  />
     </Row>

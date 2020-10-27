@@ -242,34 +242,15 @@ namespace CustomKeyboard.Droid.Renderers
                     break;
 
                 case Keycode.Button16:
-                    // Sometimes EditText takes long to update the HasFocus status
-                    //if (this.EditText.HasFocus)
-                    //{
-                    // Close the keyboard, remove focus and launch command asociated action
-                    //this.HideKeyboardView();
-
-                    //this.ClearFocus();
-                    //this.EditText.ShowSoftInputOnFocus = true;
-                    //imm.ShowSoftInput(this, ShowFlags.Implicit);// HideSoftInputFromWindow(this.EditText.WindowToken, HideSoftInputFlags.None);
-
-
-                    //this.mKeyboard = new Android.sof InputMethodServices.Keyboard(this.context, Resource.Xml.special_keyboard);
-
-                    //this.SetCurrentKeyboard();
-
+                    
                     this.HideKeyboardView();
-
-                    //this.ClearFocus();
-
+                    //Show native keyboard
                     InputMethodManager inputMethodManager = (InputMethodManager)this.context.GetSystemService(Context.InputMethodService) as InputMethodManager;
                     inputMethodManager.ShowSoftInput(this, ShowFlags.Forced);
                     inputMethodManager.ToggleSoftInput(ShowFlags.Forced, HideSoftInputFlags.ImplicitOnly);
                     
-            
-
-
                     this.entryWithCustomKeyboard.AbcCommand?.Execute(null);
-                    //}
+
                     break;
             }
 

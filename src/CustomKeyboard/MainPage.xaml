@@ -3,8 +3,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:CustomKeyboard"
-    xmlns:KB="clr-namespace:CustomKeyboard.ViewModels"
-    xmlns:effects="clr-namespace:Xamarin.KeyboardHelper;assembly=Xamarin.KeyboardHelper"
     x:Class="CustomKeyboard.MainPage"
     Title="Custom Keyboard App"
     BackgroundColor="White">
@@ -35,31 +33,12 @@
 
                 <local:EntryWithCustomKeyboard
                     x:Name="entry2"
-                    effects:KeyboardEffect.EnableKeyboard="True"
                     HorizontalOptions="FillAndExpand"
                     Keyboard="Text"
                     TextColor="Black"
-                    Placeholder="Custom Keyboard entry 2...">
-                    <Entry.Effects>
-                        <effects:KeyboardEnableEffect/>
-                    </Entry.Effects>
-                    </local:EntryWithCustomKeyboard>
-
+                    Placeholder="Custom Keyboard entry 2...">                    
+                    </local:EntryWithCustomKeyboard>               
                 
-
-                <Entry x:Name="entry3" Text="Toggle Keyboard" effects:KeyboardEffect.EnableKeyboard="{Binding BooleanBinding}">
-                    <Entry.Effects>
-                        <effects:KeyboardEnableEffect/>
-                    </Entry.Effects>
-                </Entry>
-
-                <Entry Text="Show Keyboard" effects:KeyboardEffect.EnableKeyboard="True">
-                    <Entry.Effects>
-                        <effects:KeyboardEnableEffect/>
-                    </Entry.Effects>
-                </Entry>
-
-
             </StackLayout>
             
             <BoxView
